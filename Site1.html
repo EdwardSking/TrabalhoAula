@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <title>Clinica XXXXXXXX</title>
+    <style>
+
+        /*smooth-scroll para melhor a fluidez da página*/
+         html {
+            scroll-behavior: smooth;
+        }
+
+        /*as cores da página foram escolhidas na intenção de passar a estética de seriedade e humanização*/
+        /*necessário encontrar mais maneiras de adaptar as imagens e os outros conteúdos ao abrir o link em dispositivos mobile*/
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            margin:0;
+            padding: 0;
+            background-color: #f0f0f0;
+            color: #333;
+            align-content: center;
+        }
+        
+        /*alterar para tag nav?*/
+        .barra {
+            background-color: #004d40;
+            color: #fff;
+            padding: 15px;
+            position: fixed;
+            top: 0;
+            width: 100%;
+        }
+
+        .barra ul{
+            list-style-type: none;  
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .barra ul li {
+           color: #fff;
+           text-decoration: none;
+           font-size: 24px;
+           padding: 10px 20px;
+           position: relative;
+        
+        }
+
+        .barra ul li:hover {
+            background-color: #01332b;
+            border-radius: 5%;
+            cursor: pointer;
+
+        }
+
+        /*referenciando várias ids ao mesmo tempo com o objetivo de poupar linhas no código*/
+        #sublista1:hover > #lista_oculta1,
+        #sublista2:hover > #lista_oculta2,
+        #sublista3:hover > #lista_oculta3 {
+            display: block;
+        }
+
+
+        #lista_oculta1 li, #lista_oculta2 li, #lista_oculta3 li{
+            border: 2px black solid
+
+        }
+
+        #lista_oculta1, #lista_oculta2, #lista_oculta3 {
+            display: none;
+            position: absolute;
+            background-color: #004d40;
+            border: black 2px solid;
+            margin-top: 10px;
+            width: 250px;
+
+        }
+
+        .secao_principal {
+            margin-top: 60px;
+            text-align: center;
+            padding: 50px 20px;
+            background-color: #e0f7fa;
+        }
+
+        .secao_principal img {
+            width: 80%;
+            max-width: 800px;
+            border: #004d40 solid 2px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+        }
+
+        .secao_principal h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #004d40;
+        }
+
+        .secao_principal p {
+            font-size: 18px;
+            color: #333;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        /*vou considerar substituir pela tag footer*/
+        .rodape {
+            background-color: #004d40;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .rodape p {
+            margin: 5px 0;
+        }
+
+        .rodape .redes_sociais a {
+            margin: 0 10px;
+            color: #fff;
+            text-decoration: none;
+            font-size: 24px;
+        }
+
+        .rodape .redes_sociais a:hover {
+            color: #e0f7fa;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="barra">
+        <ul>
+        <li>Início 
+        <li id="sublista1">Especialidades 
+            <ul id="lista_oculta1">
+                <li>Cardiologista</li>
+                <li>Ortopedista</li>
+                <li>Oftalmologista</li>
+                <li>Urologista</li>
+                <li>Mais...</li>
+        </ul></li>
+
+        <li id="sublista2">Médicos
+            <ul id="lista_oculta2"> 
+                <li>Dr.Artur Adriano</li>
+                <li>Dr.Bruno Borges</li>
+                <li>Dr.Carlos Cipriano</li>
+                <li>Dr.Daniel Diógenes</li>
+                <li>Mais...</li>
+        </ul></li>
+
+        <li id="sublista3">Resultados
+            <ul id="lista_oculta3">
+                <li>Ultrassonografia</li>
+                <li>Ressonância</li>
+                <li>Hemograma</li>
+                <li>Radiografia</li>
+                <li>Mais...</li>
+        </ul></li>
+
+
+        <li>Contatos</li>
+        </ul>
+    </div>
+
+    <div class="secao_principal">
+        <img src="imagem_corpo.webp" alt="">
+        <h1>Bem-vindo à Clínica XXXXXXX</h1>
+        <p>Na Clínica XXXXXXX, oferecemos atendimento de excelência em diversas especialidades médicas. Nossa missão é cuidar da sua saúde com qualidade, eficiência e um atendimento humanizado.</p>
+    </div>
+
+    <div class="rodape">
+        <p>&copy; 2024 Clínica XXXXXXX. Todos os direitos reservados.</p>
+        <p>Rua da Saúde, 123 - Centro, Cidade - Estado</p>
+        <p>(83) 1234-5678 | contato@email.com.br</p>
+        <div class="redes_sociais">
+            <a href="#">Facebook</a>
+            <a href="#">Instagram</a>
+            <a href="#">LinkedIn</a>
+        </div>
+    </div>
+
+</body>
+</html>

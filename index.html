@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Edward Souza</title>
+    <style>
+
+        /*configurações do corpo da página*/
+        /*como a página possui 4 links internos, que encaminham pra outras seções da página, optei pelo smooth-scroll para melhor a fluidez da página*/
+        html {
+            scroll-behavior: smooth;
+             }
+        /*as cores gradientes na página, que variam do topo a base, foram escolhidas para dar um pouco mais de textura a página*/
+        /*necessário encontrar mais maneiras de adaptar as imagens e os outros conteúdos ao abrir o link em dispositivos mobile*/
+        body {
+            margin: 0;
+            height: 510vh;
+            background: linear-gradient(to bottom, #1D2B64, #4d2167); /*achar um substituto para fundo da página, está muito estática, sem vida*/
+            font-family: Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+
+        /*cara inicial da página*/
+        /*substituir pela tag header?*/
+        img {
+            margin-top: 10px;
+            margin-bottom: -110px;
+        }
+        
+        .nome {
+            font-size: 140px;
+            font-family: Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif ;
+            color: white;
+            text-align: center;
+            margin-bottom: -30px;
+        }
+            
+        .curso {
+            font-size: 36px;
+            font-family: Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;
+            color: white;
+            margin-bottom: 30px;
+        } 
+
+        #sobre_mim {
+            color: white;
+            text-align: justify;
+            margin: 40px;
+            font-size: 36px ;
+            background-color: #1D2B64;
+            border: 2px white solid;
+            border-radius: 1%;
+            padding: 15px;
+            margin-top: 60px;
+        }
+        
+        /*aqui está a estilização dos títulos de cada seção, que são chamadas através da barra de navegação, por isso cada um possui um id próprio ao invés de uma classe geral para todos, também estou referenciando várias ids ao mesmo tempo com o objetvo de poupar linhas no código*/
+        #título1, #título2, #título3, #título4 {
+            color: white;
+            text-align: justify;
+            margin: 40px;
+            font-size: 36px ;
+            background-color: #1D2B64;
+            border: 2px white solid;
+            border-radius: 1%;
+            padding: 15px;
+        }
+        /*descobrir uma forma de dimnuir o uso dessas linhas nesse trecho*/
+        #título1 {
+            margin-top: 300px;
+        }
+
+        #título2 {
+            margin-top: 240px;  
+        }
+
+        #título3 {
+            margin-top: 300px;
+        }
+
+        #título4 {
+            margin-top: 450px;
+        }
+        
+        /*vou considerar substituir pela tag nav*/
+        nav {
+            position: fixed;
+            bottom: 0;
+            margin-bottom: 150px;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            z-index: 1000;
+        }
+ 
+        nav ul {
+            list-style-type: none;
+            align-items: center;
+            margin-top: 20px;
+            margin-left: 60px;
+            padding: 0;
+            width: 1000px;
+            display: flex;
+        }
+
+        /*a barra de navegação vai ser em um tom de azul mais claro, para existir destaque da cor do corpo da página*/
+        nav li a {
+            float: left;
+            display: block;
+            color: white;
+            padding: 8px 16px;
+            text-decoration: none;
+            background-color: #40539e;
+            border-radius: 5%;
+            font-size: 36px;
+            margin-right: 10px;
+            border: 2px solid #090f27;
+        }
+
+        nav li a:hover {
+            background-color: rgb(36, 34, 34);
+            border: 2px solid rgb(8, 8, 8);
+            left: 0;
+        }
+
+        .lista_formacao {
+            list-style-type: none;
+            color: white;
+            font-size: 36px;
+            margin-top: 50px;
+            background-color: #1D2B64;
+            border: 2px white solid;
+            border-radius: 1%;
+            padding: 15px;  
+        }
+
+        .imagens ul{
+            list-style-type: none;
+            display: flex;
+            left: 0;
+            gap: 10px;
+        }
+        
+        .imagens ul img{
+            border: 2px solid white;
+        }
+
+        .imagens ul img:hover {
+            border: 4px solid rgb(36, 34, 34); /*trocar para uma cor de maior destaque*/
+        }
+
+        .contatos {
+            font-family: Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;;
+            color: white;
+            font-size: 18px;
+        }
+
+        .linkedin{
+            color:white;
+        }
+
+        .formulario{
+            display: flex;
+            flex-direction: column;
+            color: white;
+            padding: 8px 16px;
+            text-decoration: none;
+            background-color: #1D2B64;
+            border-radius: 5%;
+            font-size: 36px;
+            border: 2px solid #0c122c;
+            width: 250px;
+        }
+
+        .form_titulos {
+            font-size: 16px;
+        }
+
+        .botao {
+            border-radius: 5%;
+            border: none;
+            cursor: pointer;
+            margin-top: 5px;
+            display: block;
+            width: fit-content;
+        }
+
+        
+
+    </style>
+
+</head>
+
+<body>
+    <img src="WebSymbol.png" alt="Simbolo" width="150vh" height="150vh">
+    
+    <p class="nome">Edward Souza</p> <br>
+    <p class="curso">Análise e Desenvolvimento de Sistemas</p>
+
+    <nav>
+        <ul>
+            <li> <a href="#título1">Sobre mim</a> </li>
+            <li> <a href="#título2">Formação Acadêmica</a></li>
+            <li> <a href="#título3">Portfólio</a></li>
+            <li> <a href="#título4">Contato</a></li>
+        </ul>
+    </nav>
+
+    <p id="título1"> Sobre Mim</p>
+    
+    <p id="sobre_mim">Nasci e cresci em João Pessoa-PB, desde muito pequeno sempre tive bastante afinidade com eletrônicos e tecnologia no geral, a partir daí o contato com jogos foi inevitável, algo que moldou bastante minha personalidade ao longo da adolescência e da vida adulta. Além disso, sou bastante íntimo da leitura e do cinema, sou muito fã do Stephen King, considero um dos maiores autores da história. Já cursei administração, mas na reta final do curso optei por mudar para a área que de fato sempre atraiu minha atenção, a de tecnologia.  </p>
+
+    <p id="título2"> Formação Acadêmica</p>
+    
+    <div class="lista_formacao">
+        <ul>
+            <li>Bacharelado em Administração de Empresas - IFPB    (2020-2023|Incompleto)</li>
+            <li>Auxiliar Administrativo - SENAC      (2023)</li>
+            <li>Análise e Desenvolvimento de Sistemas - UNINTER (2024-Em Progresso)</li>
+            <li>Inglês fluente</li>
+        </ul>
+    </div>
+
+    <p id="título3"> Portfólio </p>
+    
+    <div class="imagens"> 
+        <ul>
+        <li><a href="Site1.html" target="_blank"> <img src="Site1.png" height="300px" width="300px"></a></li>
+        <li><a href="Site2.html" target="_blank"> <img src="Site2.png" height="300px" width="300px"></a></li>
+        <li><a href="Site3.html" target="_blank"> <img src="Site3.png" height="300px" width="300px"></a></li>
+        <li><a href="Site4.html" target="_blank"> <img src="Site4.png" height="300px" width="300px"></a></li>
+        </ul>
+    </div>
+    
+
+    <p id="título4">Contato</p>
+    
+    <div class="contatos">
+        <p>Email: Edward_Sking@outlook.com</p>
+        <p>Telefone: (83) 99864-2749</p>
+        <p > <a href="https://www.linkedin.com/feed/?trk=guest_homepage-basic_nav-header-signin" class="linkedin">Linkedin</a></p>
+        <p class="opcao"> Ou envie diretamente:</p>
+    </div>
+    
+    <form class="formulario">
+        <label class="form_titulos">Nome::</label>
+        <input type="text" name="nome">
+        <label class="form_titulos">Email:</label>
+        <input type="email" name="email">
+        <label class="form_titulos">Mensagem:</label>
+        <textarea placeholder="Digite aqui o motivo do seu contato"></textarea>
+        <button type ="submit" class="botao"> Enviar </button>
+    </form>
+
+</body>
+</html>

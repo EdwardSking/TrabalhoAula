@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" conteudo="width=device-width, initial-scale=1.0">
+    <title>Página de Streaming</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header {
+            background-color: #d32f2f;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px black solid;
+            width: 100%;
+        }
+
+        .video {
+            background-color: #000;
+            width: 80%;
+            max-width: 800px;
+            height: 450px;
+            margin: 20px 0;
+            position: relative;
+            border-radius: 3%;
+        }
+
+        .video_hipotetico {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 2rem;
+        }
+
+        .video_detalhes {
+            width: 80%;
+            max-width: 800px;
+            background-color: #fff;
+            padding: 15px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .video_titulo {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .video_info {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        button {
+            color: #fff;
+            background-color: #d32f2f;
+            border-radius: 3%;
+            width: 100%;
+            align-self: auto;
+        }
+        
+        button:hover {
+            background-color: #561010;
+        }
+
+        .video_descricao {
+            font-size: 1rem;
+            color: #444;
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+
+        .comentarios_secao {
+            width: 80%;
+            max-width: 800px;
+            background-color: #fff;
+            padding: 15px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .comentario {
+            display: flex;
+            margin-bottom: 15px;
+        }
+
+        .comentario_avatar {
+            background-color: #ccc;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+
+        .comentario_conteudo {
+            flex-grow: 1;
+        }
+
+        .comentario_autor {
+            font-size: 0.9rem;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .comentario_texto {
+            font-size: 0.9rem;
+            color: #555;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Plataforma de Streaming</h1>
+    </header>
+    <div class="video">
+        <div class="video_hipotetico">
+            Botão de Play
+        </div>
+    </div>
+
+    <div class="video_detalhes">
+        <div class="video_titulo">Título do Vídeo XXXXXXX</div>
+        <div class="video_info">
+            <span>1,2M visualizações • 14 de agosto de 2024</span>
+            <span><button>Inscreva-se</button></span>
+            <span>Publicado por: Canal XXXXXXX</span>
+        </div>
+        <div class="video_descricao">
+            Descrição do vídeo: Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis ratione nobis est iste rem vitae laborum eius, consequatur atque molestias?.
+        </div>
+    </div>
+
+    <div class="comentarios_secao">
+        <h3>Comentários</h3>
+        <div class="comentario">
+            <div class="comentario_avatar"></div>
+            <div class="comentario_conteudo">
+                <div class="comentario_autor">Usuário1</div>
+                <div class="comentario_texto">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi, neque sit! Maiores delectus corrupti nesciunt, vel molestias mollitia voluptas vero excepturi animi voluptatem reiciendis nulla omnis quis magnam eveniet ex..</div>
+            </div>
+        </div>
+        <div class="comentario">
+            <div class="comentario_avatar"></div>
+            <div class="comentario_conteudo">
+                <div class="comentario_autor">Usuário2</div>
+                <div class="comentario_texto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore cupiditate culpa architecto saepe fugiat eos..</div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
